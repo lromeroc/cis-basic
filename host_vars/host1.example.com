@@ -1,0 +1,2 @@
+---
+cron_hardening: true
