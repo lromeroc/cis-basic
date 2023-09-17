@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - role: roles/cis_cron
+      when: cron_hardening
+    - role: roles/cis_ssh
+      when: ssh_hardening
+    - role: roles/cis_rsyslog
