@@ -1,0 +1,3 @@
+---
+cron_hardening: true
+ssh_hardening: true
