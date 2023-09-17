@@ -3,7 +3,7 @@
   become: true
   roles:
     - role: roles/cis_cron
-      when: cron_hardening
+      when: "{{ cron_hardening | default(true) }}"
     - role: roles/cis_ssh
-      when: ssh_hardening
+      when: "{{ ssh_hardening | default(true) }}"
     - role: roles/cis_rsyslog
